@@ -47,7 +47,7 @@ function changePlayer(){
 function checkWinner(){
     let roundWon = false;
 
-    For(let i = 0; i < winConditions.length; i++){
+    for(let i = 0; i < winConditions.length; i++){
         const condition = winConditions[i];
         const cellA = options[condition[0]];
         const cellB = options[condition[1]];
@@ -75,5 +75,9 @@ function checkWinner(){
 }
 
 function restartGame(){
-
+    currentPlayer = "X";
+    options = ["","","","","","","","",""];
+    statusText.textContent = `${currentPlayer}' s turn`;
+    cells.forEach(cell => cell.textContent = "");
+    running = true;
 }
