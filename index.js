@@ -1,6 +1,6 @@
-const cells = document.querySelectorAll('.cell');
-const statusText = document.querySelector('#statusText');
-const restartBtn = document.querySelector('#restartBtn');
+const cells = document.querySelectorAll(".cell");
+const statusText = document.querySelector("#statusText");
+const restartBtn = document.querySelector("#restartBtn");
 const winConditions = [
     [0, 1, 2],
     [3, 4, 5],
@@ -40,7 +40,7 @@ function updateCell(cell, index){
 }
 
 function changePlayer(){
-    currentPlayer = (currentPlayer == "X") ? "0" : "X";
+    currentPlayer = (currentPlayer == "X") ? "O" : "X";
     statusText.textContent = `${currentPlayer}'s turn`;
 }
 
